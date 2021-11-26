@@ -1,21 +1,13 @@
 # Sender
 
-**TODO: Add description**
+This is a little project for playing with some functions from the `Task` module. It simulates an email sending service.
 
-## Installation
+Taken when reading the book _Concurrent Data Processing in Elixir Fast, Resilient Applications with OTP, GenStage, Flow, and Broadway_ by Svilen Gospodinov
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `sender` to your list of dependencies in `mix.exs`:
+Basically it works by calling:
 
-```elixir
-def deps do
-  [
-    {:sender, "~> 0.1.0"}
-  ]
-end
+```Elixir
+Sender.notify_all(emails)
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/sender](https://hexdocs.pm/sender).
-
+Then, uncomment the several functions to see different results 😉.
