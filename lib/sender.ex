@@ -25,9 +25,11 @@ defmodule Sender do
     |> Enum.to_list()
   end
 
-  def send_email("konnichiwa@world.com" = email) do
-    raise "Oops, couldn't send email to #{email}"
-  end
+  # def send_email("konnichiwa@world.com" = email) do
+  #   raise "Oops, couldn't send email to #{email}"
+  # end
+
+  def send_email("konnichiwa@world.com" = _email), do: :error
 
   def send_email(email) do
     3_000
@@ -35,6 +37,6 @@ defmodule Sender do
     |> Process.sleep()
 
     IO.puts("Email sent to #{email}")
-    {:ok, email}
+    {:ok, :email_sent}
   end
 end
